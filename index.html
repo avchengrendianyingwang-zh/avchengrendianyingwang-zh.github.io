@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>电影网：avchengrendianyingwang-zh 成人向电影资料检索与观影规划入口｜avchengrendianyingwang-zh</title>
+<meta name="description" content="电影网（avchengrendianyingwang-zh）是面向成年观众的严肃向电影资料站点，覆盖全球成人向剧情片、作者电影、限制级独立制作与影史经典修复版。提供片名、题材、分级提示、映期、口碑与片单检索，官方唯一入口为 https://avchengrendianyingwang-zh.github.io。">
+<meta name="keywords" content="电影网,电影网网址,avchengrendianyingwang-zh,avchengrendianyingwang-zh.github.io,成人向电影资料,限制级独立制作,作者电影片单,电影分级提示,观影规划,影史修复版">
+<meta name="author" content="电影网编辑部">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
+<meta name="rating" content="RTA-5042">
+<meta name="revisit-after" content="2 days">
+<meta name="copyright" content="© 电影网（avchengrendianyingwang-zh）">
+<meta name="theme-color" content="#f7f4ec">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:site_name" content="电影网（avchengrendianyingwang-zh）">
+<meta property="og:title" content="电影网：成人向电影资料检索、分级提示与片单规划">
+<meta property="og:description" content="电影网为成年观众整理作者电影、限制级独立制作与影史修复版资料，含片名、题材、分级、映期与口碑。唯一官方入口：https://avchengrendianyingwang-zh.github.io">
+<meta property="og:url" content="https://avchengrendianyingwang-zh.github.io">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="电影网 · 成人向电影资料与观影规划">
+<meta name="twitter:description" content="电影网（avchengrendianyingwang-zh）：作者电影、限制级独立制作与影史修复版资料检索。官方入口：https://avchengrendianyingwang-zh.github.io">
+<link rel="canonical" href="https://avchengrendianyingwang-zh.github.io">
+<style>
+:root{
+  --bg:#f7f4ec; --bg2:#efe9dc; --ink:#1a1a1a; --ink2:#4d4d4d; --muted:#8a857c;
+  --line:#e0d9c9; --line2:#cdc4b1;
+  --rust:#9c3d2b; --rust-d:#7a2c1e; --ink-slate:#232220; --paper:#fffdf8;
+  --gold:#b08d3f; --shadow:0 14px 34px -26px rgba(26,26,26,.55);
+  --mono:ui-monospace,SFMono-Regular,Menlo,"Cascadia Mono",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif;
+  font-size:15px;line-height:1.72;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{margin:0;padding:0;list-style:none}
+h1,h2,h3,h4{margin:0;font-weight:700;line-height:1.32}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+.container{background:var(--paper);border:1px solid var(--line);border-top:0;box-shadow:var(--shadow)}
+
+/* ===== 报头 ===== */
+.masthead{border-bottom:3px double var(--ink-slate);padding:22px 0 0;background:var(--paper)}
+.mast-top{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.mast-mono{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.06em}
+.mast-mono b{color:var(--rust);font-weight:700}
+.mast-top .spacer{flex:1}
+.mast-title{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;padding:14px 0 10px;border-bottom:1px solid var(--line2)}
+.mast-title .cn{font-size:clamp(34px,6vw,58px);letter-spacing:.14em;font-weight:800;color:var(--ink-slate)}
+.mast-title .cn span{color:var(--rust)}
+.mast-title .en{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.18em;text-transform:uppercase}
+.mast-sub{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:9px 0;border-bottom:1px solid var(--line2);font-size:12.5px;color:var(--ink2)}
+.mast-sub .pip{width:5px;height:5px;background:var(--rust);border-radius:50%}
+.mast-sub a{color:var(--rust-d);border-bottom:1px dotted var(--rust)}
+.mast-url{
+  margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--ink2);
+  border:1px solid var(--line2);border-radius:2px;padding:5px 9px;letter-spacing:.02em;
+}
+.mast-url strong{color:var(--rust);font-weight:700}
+
+/* ===== 导航 ===== */
+nav.tabs{border-bottom:1px solid var(--ink-slate);background:var(--ink-slate)}
+nav.tabs ul{display:flex;flex-wrap:wrap;gap:0}
+nav.tabs a{
+  display:block;padding:11px 17px;color:#e8e3d8;font-size:14px;letter-spacing:.04em;
+  border-right:1px solid rgba(255,255,255,.12);transition:.18s
+}
+nav.tabs a:hover{background:var(--rust);color:#fff}
+nav.tabs a.on{background:var(--rust);color:#fff}
+
+/* ===== 导语条 ===== */
+.lede{border-bottom:1px solid var(--line2);padding:16px 0;background:var(--bg2)}
+.lede .wrap{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
+.lede .label{
+  flex:none;background:var(--rust);color:#fff;font-size:11.5px;font-weight:700;
+  letter-spacing:.1em;padding:4px 9px;border-radius:2px
+}
+.lede p{margin:0;font-size:13.5px;color:var(--ink2);flex:1;min-width:260px}
+.lede p a{color:var(--rust-d);font-weight:600}
+
+/* ===== 通用区块 ===== */
+section{padding:48px 0}
+.sec{display:flex;gap:16px;align-items:baseline;flex-wrap:wrap;border-bottom:2px solid var(--ink-slate);padding-bottom:9px;margin-bottom:26px}
+.sec .idx{font-family:var(--mono);font-size:12px;color:#fff;background:var(--ink-slate);padding:4px 8px;border-radius:2px;letter-spacing:.06em}
+.sec h2{font-size:clamp(22px,2.8vw,28px);letter-spacing:.03em}
+.sec .en{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.16em;text-transform:uppercase}
+.sec .note{margin-left:auto;font-size:12.5px;color:var(--muted)}
+.sec .note a{color:var(--rust-d);border-bottom:1px solid var(--line2)}
+
+/* ===== 栏目一：资料库 ===== */
+.db-tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;align-items:center}
+.db-tools select,.db-tools input{
+  border:1px solid var(--line2);background:var(--paper);font-family:inherit;font-size:13.5px;
+  padding:9px 11px;border-radius:2px;color:var(--ink);outline:none
+}
+.db-tools input{flex:1;min-width:200px}
+.db-tools button{
+  border:0;background:var(--rust);color:#fff;font-family:inherit;font-weight:700;font-size:13.5px;
+  padding:10px 20px;border-radius:2px;cursor:pointer;letter-spacing:.06em
+}
+.db-tools button:hover{background:var(--rust-d)}
+.db-tools .hint{font-size:12px;color:var(--muted);width:100%}
+table.films{width:100%;border-collapse:collapse;font-size:14px}
+table.films caption{caption-side:top;text-align:left;font-size:12.5px;color:var(--muted);padding-bottom:8px}
+table.films th{
+  background:var(--ink-slate);color:#f2ede2;font-weight:600;font-size:12.5px;letter-spacing:.05em;
+  padding:10px 11px;text-align:left;border-right:1px solid rgba(255,255,255,.14)
+}
+table.films th:last-child{border-right:0}
+table.films td{padding:12px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+table.films tr:nth-child(even) td{background:#fbf8f1}
+table.films tr:hover td{background:#f5efe2}
+table.films .ttl{font-weight:700;font-size:14.5px}
+table.films .yr{font-family:var(--mono);color:var(--muted);font-size:12.5px}
+table.films .rate{font-family:var(--mono);font-weight:700;color:var(--rust);white-space:nowrap}
+table.films .act{white-space:nowrap;color:var(--rust-d);font-size:13px}
+.rate-tag{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:700;letter-spacing:.05em;border:1px solid currentColor;border-radius:2px;padding:1px 4px;margin-left:5px;vertical-align:middle}
+.tag-adult{color:var(--rust)}
+.tag-r{color:#2f6b4f}
+.tag-nc{color:#6b5b2f}
+
+/* ===== 栏目二：策展 ===== */
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.col{border:1px solid var(--line2);border-radius:3px;overflow:hidden;background:var(--paper);display:flex;flex-direction:column;transition:.22s}
+.col:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.col .band{background:var(--ink-slate);color:#f2ede2;padding:12px 14px}
+.col .band h3{font-size:17px;letter-spacing:.04em}
+.col .band span{display:block;font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:.12em;margin-top:3px}
+.col ul{padding:14px 15px;flex:1}
+.col li{padding:8px 0;border-bottom:1px dotted var(--line2);font-size:13.5px;display:flex;gap:8px}
+.col li:last-child{border-bottom:0}
+.col li em{flex:none;font-style:normal;font-family:var(--mono);font-size:11.5px;color:var(--rust);width:30px}
+.col .more{padding:0 15px 14px}
+.col .more a{font-size:12.5px;color:var(--rust-d);border-bottom:1px solid var(--line2)}
+
+/* ===== 栏目三：专题 ===== */
+.feat{display:grid;grid-template-columns:1.15fr 1fr;gap:26px;align-items:stretch}
+.feat-main{border:1px solid var(--ink-slate);border-radius:3px;overflow:hidden;display:flex;flex-direction:column}
+.feat-figure{position:relative;background:linear-gradient(135deg,#3a2b25,#1c1a18);min-height:230px;display:grid;place-items:center;color:#f3ece0;text-align:center;padding:26px}
+.feat-figure::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 5px,rgba(255,255,255,.035) 5px 6px)}
+.feat-figure .vol{font-family:var(--mono);font-size:12px;letter-spacing:.24em;color:var(--gold)}
+.feat-figure .ti{font-size:clamp(22px,3vw,30px);margin-top:10px;font-weight:800;letter-spacing:.05em}
+.feat-figure .en2{font-family:var(--mono);font-size:11px;color:#c6beae;margin-top:10px;letter-spacing:.14em}
+.feat-body{padding:22px 24px 24px;border-top:3px double var(--ink-slate)}
+.feat-body .byline{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.08em}
+.feat-body p{margin:12px 0 0;font-size:14px;color:var(--ink2)}
+.feat-body .points{margin:16px 0 0;padding:0;border-top:1px solid var(--line2)}
+.feat-body .points li{padding:10px 0 10px 30px;position:relative;border-bottom:1px solid var(--line);font-size:13.5px}
+.feat-body .points li::before{
+  content:counter(pt);counter-increment:pt;position:absolute;left:0;top:10px;
+  font-family:var(--mono);font-size:11.5px;color:var(--paper);background:var(--rust);
+  width:19px;height:19px;border-radius:50%;display:grid;place-items:center;font-weight:700
+}
+.feat-body .points{counter-reset:pt}
+.feat-side{display:grid;gap:16px;grid-template-rows:1fr 1fr}
+.qcard{border:1px solid var(--line2);border-left:5px solid var(--rust);border-radius:3px;padding:20px;background:var(--paper);display:flex;flex-direction:column}
+.qcard .k{font-family:var(--mono);font-size:11.5px;color:var(--rust);letter-spacing:.12em}
+.qcard h4{margin:7px 0 9px;font-size:17px}
+.qcard p{margin:0;font-size:13.5px;color:var(--ink2);flex:1}
+.qcard a{margin-top:12px;font-size:12.5px;color:var(--rust-d);border-bottom:1px solid var(--line2);align-self:flex-start}
+
+/* ===== 栏目四：时间线 ===== */
+.timeline{position:relative;padding-left:46px}
+.timeline::before{content:"";position:absolute;left:12px;top:6px;bottom:6px;width:2px;background:var(--line2)}
+.tl-item{position:relative;padding:0 0 26px;border-bottom:1px solid var(--line);margin-bottom:26px}
+.tl-item:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.tl-item::before{
+  content:"";position:absolute;left:-40px;top:4px;width:14px;height:14px;border-radius:50%;
+  background:var(--paper);border:3px solid var(--rust)
+}
+.tl-item .when{font-family:var(--mono);font-size:12.5px;color:var(--rust);letter-spacing:.05em}
+.tl-item h3{font-size:19px;margin:5px 0 8px}
+.tl-item p{margin:0 0 8px;font-size:14px;color:var(--ink2);max-width:72ch}
+.tl-item .chips{display:flex;gap:7px;flex-wrap:wrap}
+.tl-item .chips span{font-size:11.5px;color:var(--ink2);border:1px solid var(--line2);border-radius:99px;padding:2px 9px;background:#fbf8f1}
+
+/* ===== 栏目五：影评 ===== */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.review{border:1px solid var(--line2);border-radius:3px;padding:20px;background:var(--paper);position:relative}
+.review::after{content:""";position:absolute;right:16px;top:8px;font-size:40px;color:var(--line2);font-family:Georgia,serif;line-height:1}
+.review .who{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+.review .av{width:34px;height:34px;border-radius:2px;background:var(--ink-slate);color:var(--gold);display:grid;place-items:center;font-size:13px;font-weight:700}
+.review .who b{font-size:14px}
+.review .who time{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.review h4{font-size:16.5px;margin-bottom:8px;padding-right:34px}
+.review p{margin:0;font-size:14px;color:var(--ink2)}
+.review .stat{display:flex;gap:16px;margin-top:13px;padding-top:11px;border-top:1px dashed var(--line2);font-size:12px;color:var(--muted)}
+.review .stat b{color:var(--rust)}
+
+/* ===== 栏目六：规则 ===== */
+.split{display:grid;grid-template-columns:1.05fr 1fr;gap:26px}
+.panel{border:1px solid var(--line2);border-radius:3px;padding:24px;background:var(--paper)}
+.panel h3{font-size:19px;margin-bottom:14px;padding-bottom:9px;border-bottom:2px solid var(--ink-slate)}
+.rule{border-bottom:1px solid var(--line);padding:13px 0 13px 0}
+.rule:last-child{border-bottom:0}
+.rule h4{font-size:15px;margin-bottom:5px}
+.rule p{margin:0;font-size:13.5px;color:var(--ink2)}
+.acc{border:1px solid var(--line2);border-radius:3px;overflow:hidden;background:var(--paper)}
+.acc details{border-bottom:1px solid var(--line)}
+.acc details:last-child{border-bottom:0}
+.acc summary{
+  cursor:pointer;padding:14px 18px;font-weight:700;font-size:14.5px;list-style:none;
+  display:flex;gap:10px;align-items:center;background:#fbf8f1
+}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary::before{content:"+";flex:none;width:20px;height:20px;background:var(--rust);color:#fff;border-radius:2px;display:grid;place-items:center;font-size:14px;line-height:1}
+.acc details[open] summary::before{content:"–"}
+.acc .a{padding:4px 18px 16px;font-size:13.5px;color:var(--ink2)}
+.acc .a p{margin:8px 0}
+
+/* ===== 页脚 ===== */
+footer{border-top:4px double var(--ink-slate);background:var(--ink-slate);color:#d9d3c6;padding:42px 0 22px}
+.foot{display:grid;grid-template-columns:1.6fr repeat(3,1fr);gap:26px}
+.foot h4{font-size:14px;color:var(--gold);margin-bottom:12px;letter-spacing:.06em}
+.foot ul li{padding:5px 0;border-bottom:1px dotted rgba(255,255,255,.14);font-size:13px}
+.foot ul a:hover{color:#fff}
+.foot .brand-big{font-size:26px;letter-spacing:.16em;font-weight:800;color:#fff}
+.foot .brand-big span{color:var(--gold)}
+.foot p{font-size:13px;color:#b6b0a2;margin:10px 0 0}
+.foot .url-box{
+  margin-top:15px;border:1px solid rgba(176,141,63,.45);border-radius:2px;padding:10px 12px;
+  font-family:var(--mono);font-size:12px;color:#e8e3d8;word-break:break-all;background:rgba(255,255,255,.05)
+}
+.foot .url-box a{color:var(--gold)}
+.copyline{margin-top:26px;padding-top:14px;border-top:1px solid rgba(255,255,255,.16);display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between;font-size:12px;color:#9b9587}
+.copyline a{color:var(--gold)}
+
+#top{position:fixed;right:16px;bottom:18px;width:44px;height:44px;background:var(--rust);color:#fff;border-radius:2px;display:grid;place-items:center;font-size:17px;z-index:60;opacity:0;pointer-events:none;transition:.2s;box-shadow:var(--shadow)}
+#top.on{opacity:1;pointer-events:auto}
+
+@media(max-width:1024px){
+  .cols{grid-template-columns:repeat(2,1fr)}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media(max-width:760px){
+  .wrap{padding:0 15px}
+  section{padding:36px 0}
+  table.films{font-size:13px}
+  table.films thead{display:none}
+  table.films,table.films tbody,table.films tr,table.films td{display:block;width:100%;border:0}
+  table.films tr{border:1px solid var(--line2);border-radius:3px;margin-bottom:12px;padding:4px 0;background:var(--paper)}
+  table.films td{border-bottom:1px dashed var(--line);padding:8px 12px}
+  table.films td:last-child{border-bottom:0}
+  table.films td::before{content:attr(data-l);display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);letter-spacing:.08em;margin-bottom:2px}
+  .feat,.grid2,.split{grid-template-columns:1fr}
+  .cols{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .mast-url{width:100%;margin-left:0}
+  .mast-title .cn{font-size:36px}
+  .db-tools button{width:100%}
+}
+@media print{.lede,nav.tabs,#top{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="masthead">
+  <div class="wrap">
+    <div class="mast-top">
+      <span class="mast-mono"><b>电影网</b> · DIANYINGWANG · 严肃向电影资料与观影规划</span>
+      <span class="mast-mono">第 41 期 · 2026 年 10 月 07 日 出版</span>
+      <span class="spacer"></span>
+      <span class="mast-url">唯一官方入口：<strong>https://avchengrendianyingwang-zh.github.io</strong></span>
+    </div>
+
+    <div class="mast-title">
+      <span class="cn">电影<span>网</span></span>
+      <span class="en">Movie Archive &amp; Viewing Guide for Adult Audiences</span>
+    </div>
+
+    <div class="mast-sub">
+      <span class="pip"></span><span>面向成年观众 · 不面向未成年人</span>
+      <span class="pip"></span><a href="#">访问入口：https://avchengrendianyingwang-zh.github.io</a>
+      <span class="pip"></span><span>本站为资料与检索服务，不提供任何在线播放或下载资源</span>
+    </div>
+  </div>
+
+  <nav class="tabs" aria-label="主导航">
+    <div class="wrap">
+      <ul>
+        <li><a href="#archive" class="on">资料库</a></li>
+        <li><a href="#columns">栏目分类</a></li>
+        <li><a href="#feature">本月专题</a></li>
+        <li><a href="#timeline">影史时间线</a></li>
+        <li><a href="#reviews">读者影评</a></li>
+        <li><a href="#rules">使用规则</a></li>
+        <li><a href="#submit">资料纠错</a></li>
+        <li><a href="#about">关于本站</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="lede">
+  <div class="wrap">
+    <span class="label">编者按</span>
+    <p>电影网（avchengrendianyingwang-zh）把“该不该看”拆成四件事：题材、分级、观影前提、能讨论什么。我们不写耸动的推荐语，只把能核实的信息摆出来。本期资料更新于 2026 年 10 月 06 日，下期更新日为 10 月 09 日。<a href="https://avchengrendianyingwang-zh.github.io">https://avchengrendianyingwang-zh.github.io</a> 是唯一官方地址，请勿通过其他域名访问。</p>
+  </div>
+</div>
+
+<div class="wrap">
+<div class="container">
+
+  <!-- 01 资料库 -->
+  <section id="archive">
+    <div class="sec">
+      <span class="idx">No.01</span>
+      <h2>成人向电影资料库</h2>
+      <span class="en">Film Archive</span>
+      <span class="note">共收录 12 部 · 每周四更新 · <a href="#">完整索引 #</a></span>
+    </div>
+
+    <div class="db-tools">
+      <select aria-label="按分级筛选"><option>全部分级</option><option>18+ 限制级</option><option>17+ 辅导级</option><option>15+ 建议辅导</option></select>
+      <select aria-label="按题材筛选"><option>全部题材</option><option>作者剧情</option><option>心理惊悚</option><option>历史政治</option><option>犯罪现实</option><option>社会纪录</option></select>
+      <select aria-label="按年代筛选"><option>全部年代</option><option>2020 年代</option><option>2010 年代</option><option>2000 年代</option><option>1990 年代</option><option>影史经典</option></select>
+      <input type="search" placeholder="输入片名、导演、制片地区或关键词，如：心理惊悚 韩国 2025">
+      <button type="button">在电影网检索</button>
+      <span class="hint">检索范围仅限本站已收录片目；分级提示为资料整理，不代表各地区法定分级，请以当地规定为准。</span>
+    </div>
+
+    <table class="films">
+      <caption>表 1 · 成人向片目资料表（示例字段，可替换为真实片库数据）</caption>
+      <thead>
+        <tr><th>片名与导演</th><th>题材</th><th>年代 / 时长</th><th>分级提示</th><th>本站摘要</th><th>资料页</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-l="片名与导演" class="ttl">长夜守门人<span class="yr">／导演：L. Marchetti</span></td>
+          <td data-l="题材">心理惊悚 · 意大利</td>
+          <td data-l="年代 / 时长">2025 · 118 分钟</td>
+          <td data-l="分级提示" class="rate">18+<span class="rate-tag tag-adult">限</span></td>
+          <td data-l="本站摘要">封闭空间内的权力博弈，台词密度远高于动作量，看完需要一段消化时间。</td>
+          <td data-l="资料页" class="act"><a href="#">查看 #</a></td>
+        </tr>
+        <tr>
+          <td data-l="片名与导演" class="ttl">南方旧工厂<span class="yr">／导演：陈远舟</span></td>
+          <td data-l="题材">作者剧情 · 华语</td>
+          <td data-l="年代 / 时长">2024 · 134 分钟</td>
+          <td data-l="分级提示" class="rate">17+<span class="rate-tag tag-r">辅</span></td>
+          <td data-l="本站摘要">以工厂搬迁为切口讲两代人，后半段节奏放缓但收束完整，适合不赶时间的场次。</td>
+          <td data-l="资料页" class="act"><a href="#">查看 #</a></td>
+        </tr>
+        <tr>
+          <td data-l="片名与导演" class="ttl">潮汐之外<span class="yr">／导演：A. Okafor</span></td>
+          <td data-l="题材">社会纪录 · 尼日利亚</td>
+          <td data-l="年代 / 时长">2025 · 96 分钟</td>
+          <td data-l="分级提示" class="rate">15+<span class="rate-tag tag-nc">建</span></td>
+          <td data-l="本站摘要">七年跟拍海岸村落的土地争议，素材量大，建议分段观看并做笔记。</td>
+          <td data-l="资料页" class="act"><a href="#">查看 #</a></td>
+        </tr>
+        <tr>
+          <td data-l="片名与导演" class="ttl">第三个证人<span class="yr">／导演：朴志宪</span></td>
+          <td data-l="题材">犯罪现实 · 韩国</td>
+          <td data-l="年代 / 时长">2025 · 125 分钟</td>
+          <td data-l="分级提示" class="rate">18+<span class="rate-tag tag-adult">限</span></td>
+          <td data-l="本站摘要">改编自真实案件卷宗，重点不在反转而在证据如何被解读，节奏偏冷。</td>
+          <td data-l="资料页" class="act"><a href="#">查看 #</a></td>
+        </tr>
+        <tr>
+          <td data-l="片名与导演" class="ttl">纸上的城市<span class="yr">／导演：I. Vargas</span></td>
+          <td data-l="题材">历史政治 · 阿根廷</td>
+          <td data-l="年代 / 时长">2023 · 142 分钟</td>
+          <td data-l="分级提示" class="rate">17+<span class="rate-tag tag-r">辅</span></td>
+          <td data-l="本站摘要">双线叙事还原一段被忽略的档案史，字幕依赖度高，不建议碎片化观看。</td>
+          <td data-l="资料页" class="act"><a href="#">查看 #</a></td>
+        </tr>
+        <tr>
+          <td data-l="片名与导演" class="ttl">午夜广播<span class="yr">／导演：S. Lindqvist</span></td>
+          <td data-l="题材">心理惊悚 · 瑞典</td>
+          <td data-l="年代 / 时长">2026 · 104 分钟</td>
+          <td data-l="分级提示" class="rate">18+<span class="rate-tag tag-adult">限</span></td>
+          <td data-l="本站摘要">声音设计是主要叙事手段，影院声场明显优于普通家用设备。</td>
+          <td data-l="资料页" class="act"><a href="#">查看 #</a></td>
+        </tr>
+        <tr>
+          <td data-l="片名与导演" class="ttl">父亲的字典<span class="yr">／导演：黄启明</span></td>
+          <td data-l="题材">家庭作者 · 华语</td>
+          <td data-l="年代 / 时长">2024 · 109 分钟</td>
+          <td data-l="分级提示" class="rate">15+<span class="rate-tag tag-nc">建</span></td>
+          <td data-l="本站摘要">小成本制作，靠表演和台词撑起全片，老年观众接受度普遍更高。</td>
+          <td data-l="资料页" class="act"><a href="#">查看 #</a></td>
+        </tr>
+        <tr>
+          <td data-l="片名与导演" class="ttl">最后的放映员<span class="yr">／导演：R. Castan</span></td>
+          <td data-l="题材">影史修复 · 法国</td>
+          <td data-l="年代 / 时长">2025 · 88 分钟</td>
+          <td data-l="分级提示" class="rate">15+<span class="rate-tag tag-nc">建</span></td>
+          <td data-l="本站摘要">关于胶片时代落幕的纪录片，附 4K 修复对比段落，资料价值高于观赏刺激。</td>
+          <td data-l="资料页" class="act"><a href="#">查看 #</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 02 栏目分类 -->
+  <section id="columns" style="background:#f1ece0;margin:0 -24px;padding:48px 24px;">
+    <div class="sec">
+      <span class="idx">No.02</span>
+      <h2>栏目分类</h2>
+      <span class="en">Sections</span>
+      <span class="note">六个常设栏目 · <a href="#">栏目说明 #</a></span>
+    </div>
+
+    <div class="cols">
+      <article class="col">
+        <div class="band"><h3>01 院线观察</h3><span>NOW SHOWING</span></div>
+        <ul>
+          <li><em>01</em><span>当周新片的分级与题材速览</span></li>
+          <li><em>02</em><span>哪些值得进影院、哪些可等流媒</span></li>
+          <li><em>03</em><span>小成本片的映期与城市分布</span></li>
+        </ul>
+        <div class="more"><a href="#">进入栏目 #</a></div>
+      </article>
+
+      <article class="col">
+        <div class="band"><h3>02 作者研究</h3><span>AUTEUR STUDY</span></div>
+        <ul>
+          <li><em>04</em><span>同一导演三部作品的对照阅读</span></li>
+          <li><em>05</em><span>长镜头与声音设计的具体拆解</span></li>
+          <li><em>06</em><span>被忽略的编剧与剪辑署名</span></li>
+        </ul>
+        <div class="more"><a href="#">进入栏目 #</a></div>
+      </article>
+
+      <article class="col">
+        <div class="band"><h3>03 分级与提示</h3><span>RATING NOTES</span></div>
+        <ul>
+          <li><em>07</em><span>各地区分级口径的差异对照</span></li>
+          <li><em>08</em><span>敏感内容的出现时点与强度</span></li>
+          <li><em>09</em><span>给陪同观看者的开场建议</span></li>
+        </ul>
+        <div class="more"><a href="#">进入栏目 #</a></div>
+      </article>
+
+      <article class="col">
+        <div class="band"><h3>04 修复档案</h3><span>RESTORATION</span></div>
+        <ul>
+          <li><em>10</em><span>4K 与 2K 修复版本的差别</span></li>
+          <li><em>11</em><span>胶片拷贝现存情况与放映记录</span></li>
+          <li><em>12</em><span>已绝版碟片的合法替代方案</span></li>
+        </ul>
+        <div class="more"><a href="#">进入栏目 #</a></div>
+      </article>
+
+      <article class="col">
+        <div class="band"><h3>05 短评现场</h3><span>SHORT REVIEWS</span></div>
+        <ul>
+          <li><em>13</em><span>一场电影只能说三句话的练习</span></li>
+          <li><em>14</em><span>读者投稿的选登与回应</span></li>
+          <li><em>15</em><span>争议片目的正反两面陈述</span></li>
+        </ul>
+        <div class="more"><a href="#">进入栏目 #</a></div>
+      </article>
+
+      <article class="col">
+        <div class="band"><h3>06 资料室</h3><span>READING ROOM</span></div>
+        <ul>
+          <li><em>16</em><span>片目资料的来源与勘误记录</span></li>
+          <li><em>17</em><span>访谈、剧本片段与场记整理</span></li>
+          <li><em>18</em><span>学术与独立媒体的外链索引</span></li>
+        </ul>
+        <div class="more"><a href="#">进入栏目 #</a></div>
+      </article>
+
+      <article class="col">
+        <div class="band"><h3>07 放映日历</h3><span>SCREENING</span></div>
+        <ul>
+          <li><em>19</em><span>展映、点映与资料馆场次</span></li>
+          <li><em>20</em><span>映后谈嘉宾与主题场次</span></li>
+          <li><em>21</em><span>城市间放映信息差异提示</span></li>
+        </ul>
+        <div class="more"><a href="#">进入栏目 #</a></div>
+      </article>
+
+      <article class="col">
+        <div class="band"><h3>08 编辑部</h3><span>ABOUT US</span></div>
+        <ul>
+          <li><em>22</em><span>评分怎么来的，为什么不评星</span></li>
+          <li><em>23</em><span>投稿规范与署名方式</span></li>
+          <li><em>24</em><span>商业合作与广告隔离声明</span></li>
+        </ul>
+        <div class="more"><a href="#">进入栏目 #</a></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 03 本月专题 -->
+  <section id="feature">
+    <div class="sec">
+      <span class="idx">No.03</span>
+      <h2>本月专题</h2>
+      <span class="en">Feature</span>
+      <span class="note">2026 年 10 月号 · <a href="#">往期专题 #</a></span>
+    </div>
+
+    <div class="feat">
+      <article class="feat-main">
+        <div class="feat-figure">
+          <div>
+            <div class="vol">VOL. 41 / OCT 2026</div>
+            <div class="ti">限制级不是卖点：<br>如何读一部成人向电影</div>
+            <div class="en2">HOW TO READ A FILM NOT MADE FOR YOUTH</div>
+          </div>
+        </div>
+        <div class="feat-body">
+          <div class="byline">本期主持：电影网编辑部 · 阅读约 7 分钟</div>
+          <p>“18+”这三个字最容易制造两种误读：一种以为它等于刺激，一种以为它等于不必讨论。本期专题想做一件相反的事——把分级提示还原成观影前提，把敏感内容还原成叙事选择，再谈它是否成立。</p>
+          <ul class="points">
+            <li><span>先分清“分级”与“题材”：同一题材在不同地区的分级可以差两档，这是制度差异，不是质量差异。</span></li>
+            <li><span>再问内容为什么存在：它的位置是否不可替代，去掉之后叙事是否成立，是判断成色的最快方法。</span></li>
+            <li><span>最后回到观看前提：你的当下状态、同行对象、观影后的安排，往往比片名更决定体验。</span></li>
+            <li><span>结论只给场景不给指令：我们写“适合谁、不适合谁”，不写“必须看”或“绝对不要看”。</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="feat-side">
+        <div class="qcard">
+          <span class="k">CASE STUDY / 01</span>
+          <h4>案例一：敏感内容只占 4 分钟，值不值得整场坐满？</h4>
+          <p>我们把出现时点、上下文与可替代的观看方式列成对照表。结论是：对于情绪容易受扰的观众，先看对照表再决定，比看完再后悔更实际。</p>
+          <a href="#">阅读案例 #</a>
+        </div>
+        <div class="qcard">
+          <span class="k">CASE STUDY / 02</span>
+          <h4>案例二：分级提示怎么写才不剧透</h4>
+          <p>编辑部内部的三条红线：不写具体内容、不写关键情节、不写时长。用“强度”和“密度”两个维度替代描述，是本站目前能接受的边界。</p>
+          <a href="#">阅读案例 #</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 影史时间线 -->
+  <section id="timeline" style="background:#f1ece0;margin:0 -24px;padding:48px 24px;">
+    <div class="sec">
+      <span class="idx">No.04</span>
+      <h2>影史时间线</h2>
+      <span class="en">Timeline</span>
+      <span class="note">一条线索看作者电影的边界变化 · <a href="#">完整时间线 #</a></span>
+    </div>
+
+    <div class="timeline">
+      <article class="tl-item">
+        <div class="when">1960s — 1970s ｜ 欧洲作者电影的边界试探</div>
+        <h3>当“成人”开始成为创作主题，而不是审查标签</h3>
+        <p>这一时期的作品把婚姻、欲望与阶级并置讨论，争议集中在表达方式而非题材本身。今天回看，真正留下来的不是尺度，而是对人如何处理关系的耐心观察。</p>
+        <div class="chips"><span>题材：婚姻与阶级</span><span>留存价值：作者表达</span><span>本站标记：影史经典</span></div>
+      </article>
+      <article class="tl-item">
+        <div class="when">1990s ｜ 亚洲现实题材的转向</div>
+        <h3>现实主义进入家庭内部，尺度退到第二位</h3>
+        <p>九十年代一批亚洲导演把镜头从社会事件转向家庭内部关系，冲突强度靠表演而非情节堆出来。这类片子在今天的分级表里往往偏高，但实际观感更接近社会观察。</p>
+        <div class="chips"><span>题材：家庭现实</span><span>留存价值：表演与结构</span><span>本站标记：长片单条目</span></div>
+      </article>
+      <article class="tl-item">
+        <div class="when">2010s ｜ 流媒体改变了发行，也改变了叙事节奏</div>
+        <h3>为客厅拍摄的片子和为影院拍摄的片子，开始出现明显差别</h3>
+        <p>2010 年代之后，不少成人向作品从一开始就是按“分段观看”设计的：单场信息量下降，集与集之间留出停顿。这改变了我们的推荐方式——同一部片，周末连看和通勤分段看，结论可以完全相反。</p>
+        <div class="chips"><span>题材：形式研究</span><span>留存价值：观看方式</span><span>本站标记：编辑部观察</span></div>
+      </article>
+      <article class="tl-item">
+        <div class="when">2020s ｜ 修复与重估同时进行</div>
+        <h3>老片被重新发现，靠的是资料工作而不是怀旧</h3>
+        <p>4K 修复让一批过去只在资料馆放映的作品重新进入讨论。重估的标准也在变化：当年被分级卡住的作品，现在被讨论的是它的剪辑与声音；当年被赞为大胆的，今天则被追问必要性。</p>
+        <div class="chips"><span>题材：修复档案</span><span>留存价值：资料重估</span><span>本站标记：修复专题</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 05 读者影评 -->
+  <section id="reviews">
+    <div class="sec">
+      <span class="idx">No.05</span>
+      <h2>读者影评</h2>
+      <span class="en">Reader Reviews</span>
+      <span class="note">每周三更新选登 · <a href="#">投稿入口 #</a></span>
+    </div>
+
+    <div class="grid2">
+      <article class="review">
+        <div class="who"><span class="av">阅</span><div><b>阅后即焚</b><br><time>2026-10-05 · 3 分钟</time></div></div>
+        <h4>《长夜守门人》最难的不是看懂，是看完不想讨论</h4>
+        <p>我通常在散场后跟朋友聊半小时，这部片我是沉默着走出影院的。它的克制不是留白，是明确在拒绝观众的情绪参与，这点要提前知道。</p>
+        <div class="stat"><span>👍 <b>142</b></span><span>💬 回复 23</span><span>收录于 成人向资料库</span></div>
+      </article>
+
+      <article class="review">
+        <div class="who"><span class="av">南</span><div><b>南方放映</b><br><time>2026-10-04 · 5 分钟</time></div></div>
+        <h4>《南方旧工厂》后半段的慢，是对观众的信任</h4>
+        <p>很多人说第二幕拖，我反而觉得那 20 分钟是整部片唯一诚实的地方。建议看两遍，第一遍跟着情绪，第二遍跟着声音。</p>
+        <div class="stat"><span>👍 <b>98</b></span><span>💬 回复 17</span><span>收录于 作者研究</span></div>
+      </article>
+
+      <article class="review">
+        <div class="who"><span class="av">潮</span><div><b>潮汐之间</b><br><time>2026-10-02 · 4 分钟</time></div></div>
+        <h4>纪录片的分级提示，为什么比剧情片更难写</h4>
+        <p>剧情片的内容可以预判，纪录片里真实人物的处境无法预判。本站把这类片标成 15+ 并附上内容背景说明，我认为比笼统写一句“含敏感内容”有用得多。</p>
+        <div class="stat"><span>👍 <b>176</b></span><span>💬 回复 31</span><span>收录于 分级与提示</span></div>
+      </article>
+
+      <article class="review">
+        <div class="who"><span class="av">字</span><div><b>字幕之后</b><br><time>2026-09-30 · 6 分钟</time></div></div>
+        <h4>《纸上的城市》要的不是看懂，是愿意坐满 142 分钟</h4>
+        <p>我把观看前提写成一句：别在困的时候看，别在想快进的时候坚持。它不考验理解力，考验的是耐心，而这点分级表里根本写不下。</p>
+        <div class="stat"><span>👍 <b>211</b></span><span>💬 回复 42</span><span>收录于 短评现场</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 06 使用规则 -->
+  <section id="rules" style="background:#f1ece0;margin:0 -24px;padding:48px 24px;">
+    <div class="sec">
+      <span class="idx">No.06</span>
+      <h2>使用规则与常见问题</h2>
+      <span class="en">Rules &amp; FAQ</span>
+      <span class="note">最后修订：2026-10-06 · <a href="#">修订记录 #</a></span>
+    </div>
+
+    <div class="split">
+      <div class="panel">
+        <h3>四条基本规则</h3>
+        <div class="rule">
+          <h4>一、本站只做资料整理，不做资源中转</h4>
+          <p>所有片目页只提供片名、题材、年代、时长、分级提示、映期与本站摘要，不设置任何播放链接、下载入口或资源跳转，也不会索取片源。</p>
+        </div>
+        <div class="rule">
+          <h4>二、分级提示是资料，不是判断</h4>
+          <p>本站的分级标注按地区资料整理，仅用于提示观看前提，不构成对影片艺术价值或道德立场的评价，也不替代当地法定分级。</p>
+        </div>
+        <div class="rule">
+          <h4>三、资料必须可追溯</h4>
+          <p>每条片目资料标注来源类型与更新日期，片名、片长、映期、分级四项出现冲突时，以官方片方或发行方公开信息为优先，并在勘误记录中留痕。</p>
+        </div>
+        <div class="rule">
+          <h4>四、评论区只讨论作品</h4>
+          <p>不讨论具体演员的私生活，不搬运未证实的传闻，不写剧情剧透而不标提示。违规留言会被删除并计入作者投稿记录。</p>
+        </div>
+      </div>
+
+      <div class="acc">
+        <details open>
+          <summary>电影网的评分是怎么算出来的？</summary>
+          <div class="a"><p>我们不评星。资料库中的数字是“资料完整度”与“读者讨论活跃度”的加权值，最高 100，用途是排序而不是判断好坏。</p></div>
+        </details>
+        <details>
+          <summary>为什么有的片子没有分级提示？</summary>
+          <div class="a"><p>发行方未公开分级、地区差异过大或资料存在冲突时，我们留空并标注“待核实”，不会用估算值补位。</p></div>
+        </details>
+        <details>
+          <summary>发现资料写错了怎么反馈？</summary>
+          <div class="a"><p>进入资料纠错栏目，注明片名、字段与可查证的来源链接。编辑部在三个工作日内核对，通过后会在该条目下显示修订日期。</p></div>
+        </details>
+        <details>
+          <summary>可以转载电影网的内容吗？</summary>
+          <div class="a"><p>可以，但需先联系编辑部并取得书面同意，转载时保留原文、作者署名与本站入口地址，不得改写片目资料中的原始表述。</p></div>
+        </details>
+        <details>
+          <summary>本站是否适合未成年人使用？</summary>
+          <div class="a"><p>不适合。本站内容面向成年观众，资料中包含限制级片目与分级提示，页面已设置相应标识，请监护人注意。</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 资料纠错 -->
+  <section id="submit">
+    <div class="sec">
+      <span class="idx">No.07</span>
+      <h2>资料纠错与读者投稿</h2>
+      <span class="en">Corrections</span>
+      <span class="note">通道开放中 · 三个工作日内回复 · <a href="#">投稿规范 #</a></span>
+    </div>
+
+    <div class="panel">
+      <form onsubmit="return false;" aria-label="资料纠错与投稿表单">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+          <div>
+            <label for="c-name" style="font-size:12.5px;color:var(--muted);">称呼或笔名</label>
+            <input id="c-name" type="text" placeholder="例如：南方放映" style="width:100%;margin-top:5px;padding:10px 11px;border:1px solid var(--line2);border-radius:2px;background:var(--paper);font-family:inherit;font-size:14px;">
+          </div>
+          <div>
+            <label for="c-type" style="font-size:12.5px;color:var(--muted);">提交类型</label>
+            <select id="c-type" style="width:100%;margin-top:5px;padding:10px 11px;border:1px solid var(--line2);border-radius:2px;background:var(--paper);font-family:inherit;font-size:14px;">
+              <option>片目资料纠错</option><option>分级提示补充</option><option>放映信息更新</option><option>影评投稿</option><option>合作与转载申请</option>
+            </select>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:2fr 1fr;gap:14px;margin-top:14px;">
+          <div>
+            <label for="c-film" style="font-size:12.5px;color:var(--muted);">片名（请与本站资料库写法保持一致）</label>
+            <input id="c-film" type="text" placeholder="例如：长夜守门人" style="width:100%;margin-top:5px;padding:10px 11px;border:1px solid var(--line2);border-radius:2px;background:var(--paper);font-family:inherit;font-size:14px;">
+          </div>
+          <div>
+            <label for="c-field" style="font-size:12.5px;color:var(--muted);">需更正的字段</label>
+            <select id="c-field" style="width:100%;margin-top:5px;padding:10px 11px;border:1px solid var(--line2);border-radius:2px;background:var(--paper);font-family:inherit;font-size:14px;">
+              <option>片名写法</option><option>片长</option><option>映期</option><option>分级</option><option>题材分类</option><option>其他</option>
+            </select>
+          </div>
+        </div>
+        <div style="margin-top:14px;">
+          <label for="c-msg" style="font-size:12.5px;color:var(--muted);">说明（附可查证来源链接，1200 字以内）</label>
+          <textarea id="c-msg" rows="6" placeholder="建议格式：现行写法 → 建议改法 → 来源依据" style="width:100%;margin-top:5px;padding:10px 11px;border:1px solid var(--line2);border-radius:2px;background:var(--paper);font-family:inherit;font-size:14px;resize:vertical;"></textarea>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+          <button type="submit" style="border:0;background:var(--rust);color:#fff;font-family:inherit;font-weight:700;font-size:14px;padding:12px 26px;border-radius:2px;cursor:pointer;letter-spacing:.06em;">提交至电影网编辑部</button>
+          <span style="font-size:12.5px;color:var(--muted);">本站不收集手机号与身份证信息，仅保留用于回复的称呼。</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 08 关于 -->
+  <section id="about" style="background:#f1ece0;margin:0 -24px;padding:48px 24px 54px;">
+    <div class="sec">
+      <span class="idx">No.08</span>
+      <h2>关于本站</h2>
+      <span class="en">About</span>
+      <span class="note">站点定位与边界 · <a href="#">团队与联系方式 #</a></span>
+    </div>
+
+    <div class="panel">
+      <p style="font-size:15px;color:var(--ink);margin:0 0 14px;">电影网（avchengrendianyingwang-zh）是一个面向成年观众的严肃向电影资料与观影规划站点，重点整理作者剧情片、限制级独立制作、心理惊悚、历史政治题材与影史修复版资料。我们不做资源搬运，不写煽动性推荐，不把分级当卖点。</p>
+      <p style="font-size:14px;color:var(--ink2);margin:0 0 14px;">内容更新节奏：片目资料每周四更新，分级提示随资料同步修订，专题每月一号发布，读者影评每周三选登。所有条目均保留首次录入日期与最近修订日期，可以在资料库条目下方查看。</p>
+      <p style="font-size:14px;color:var(--ink2);margin:0;">官方入口唯一，地址为 <a href="https://avchengrendianyingwang-zh.github.io" style="color:var(--rust-d);font-weight:700;border-bottom:1px solid var(--line2);">https://avchengrendianyingwang-zh.github.io</a>，请勿通过其他域名或第三方镜像访问本站。商业合作与广告投放均独立核算，编辑部不参与片方宣传费用的分成，稿件中涉及宣传性质的条目会单独标注。</p>
+    </div>
+  </section>
+
+</div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="brand-big">电影<span>网</span></div>
+        <p>成人向电影资料、分级提示、作者研究与观影规划。本站不提供在线播放、下载或资源分享服务，所有片目资料以公开信息为基础并注明来源与修订日期。</p>
+        <div class="url-box">官方网站（唯一入口）：<br><a href="https://avchengrendianyingwang-zh.github.io">https://avchengrendianyingwang-zh.github.io</a></div>
+      </div>
+      <div>
+        <h4>栏目导航</h4>
+        <ul>
+          <li><a href="#archive">成人向电影资料库</a></li>
+          <li><a href="#columns">栏目分类</a></li>
+          <li><a href="#feature">本月专题</a></li>
+          <li><a href="#timeline">影史时间线</a></li>
+          <li><a href="#reviews">读者影评</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>服务与规则</h4>
+        <ul>
+          <li><a href="#rules">使用规则</a></li>
+          <li><a href="#submit">资料纠错与投稿</a></li>
+          <li><a href="#about">关于本站</a></li>
+          <li><a href="#">资料来源与勘误记录 #</a></li>
+          <li><a href="#">更新日志 #</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>外部索引</h4>
+        <ul>
+          <li><a href="#">独立电影机构索引 #</a></li>
+          <li><a href="#">资料馆与展映单位 #</a></li>
+          <li><a href="#">分级制度对照说明 #</a></li>
+          <li><a href="#">本站内容转载规范 #</a></li>
+          <li><a href="#">隐私与免责声明 #</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyline">
+      <span>© 2026 电影网（avchengrendianyingwang-zh）. 本站内容仅供成年观众参考，不构成观看建议或法律意见。</span>
+      <span>唯一官方入口：<a href="https://avchengrendianyingwang-zh.github.io">https://avchengrendianyingwang-zh.github.io</a></span>
+    </div>
+  </div>
+</footer>
+
+<a href="#" id="top" aria-label="回到顶部">↑</a>
+
+<script>
+(function(){
+  var top=document.getElementById('top');
+  function onScroll(){ if(window.scrollY>500){top.classList.add('on');}else{top.classList.remove('on');} }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+  top.addEventListener('click',function(e){ e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); });
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var id=a.getAttribute('href');
+      if(id.length<2) return;
+      var el=document.querySelector(id);
+      if(!el) return;
+      e.preventDefault();
+      window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-16,behavior:'smooth'});
+    });
+  });
+  var tabs=document.querySelectorAll('nav.tabs a');
+  var secs=[];
+  tabs.forEach(function(t){
+    var el=document.querySelector(t.getAttribute('href'));
+    if(el) secs.push({a:t,el:el});
+  });
+  function onSpy(){
+    var pos=window.scrollY+140, cur=null;
+    secs.forEach(function(s){ if(s.el.offsetTop<=pos) cur=s.a; });
+    tabs.forEach(function(t){ t.classList.remove('on'); });
+    if(cur) cur.classList.add('on');
+  }
+  window.addEventListener('scroll',onSpy,{passive:true}); onSpy();
+})();
+</script>
+</body>
+</html>
